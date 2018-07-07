@@ -1,0 +1,27 @@
+{
+  "name": "dva-native",
+  "version": "0.0.1",
+  "description": "encapsulating react-navigation, dva-core, axios and mockjs for react-native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "dva",
+    "redux",
+    "redux-saga",
+    "axios",
+    "mock"
+  ],
+  "author": "Chen Kun",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dva-core": "^1.3.0",
+    "mockjs": "^1.0.1-beta3",
+    "react-navigation": "^2.6.2",
+    "react-navigation-redux-helpers": "^2.0.2",
+    "react-redux": "^5.0.7"
+  }
+}
