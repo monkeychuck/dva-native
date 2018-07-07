@@ -9,12 +9,14 @@ import Button from '../component/button';
 
 class Page1 extends Component {
 	render(){
-		const { startupNum, navigation } = this.props;
+		const { startupNum, nickname, navigation } = this.props;
 		return (
 			<View style={[commonStyles.page, commonStyles.center]}>
 				<Text style={commonStyles.text}>
 					startup: {startupNum}
 				</Text>
+				<Text style={commonStyles.text}>
+					nickname: {nickname}</Text>
 				<Button
 					title="Jump Page2"
 					onPress={() => navigation.navigate('Page2')}
