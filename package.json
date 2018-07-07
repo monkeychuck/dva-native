@@ -1,10 +1,14 @@
 {
   "name": "dva-native",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "encapsulating react-navigation, dva-core, axios and mockjs for react-native",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monkeyChuck/dva-native"
   },
   "keywords": [
     "react-native",
@@ -14,7 +18,7 @@
     "axios",
     "mock"
   ],
-  "author": "Chen Kun",
+  "author": "monkeychuck",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",

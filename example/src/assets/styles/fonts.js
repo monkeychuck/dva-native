@@ -24,8 +24,6 @@ let fonts = {
 	base: base,
 	small: base * 0.8,
 	h5: base,
-	fontSize: fontSize,
-	scaleSize: scaleSize
 };
 
 // 生成h1 - h9字体大小, 每个等级相差base的0.15倍大小

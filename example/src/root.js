@@ -7,7 +7,7 @@ import {
 import { commonStyles } from './assets/styles';
 
 export default function({ Router, app }) {
-	let time = 5;
+	let time = 3;
 	return class Root extends Component {
 		state = { time }
 
@@ -21,7 +21,7 @@ export default function({ Router, app }) {
 						time: --time
 					})
 				}
-			})
+			}, 1000)
 		}
 
 		componentWillUnmount() {

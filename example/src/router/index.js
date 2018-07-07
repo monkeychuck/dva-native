@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { StackNavigator } from 'react-native-dva/navigation';
-import dynamic from 'react-native-dva/dynamic';
+import { createStackNavigator } from 'dva-native/navigation';
+import dynamic from 'dva-native/dynamic';
 
-export default function({ app }) {
+export default function(getApp) {
 	// wrapper of dynamic
-	const wrapper = (models, component) => dynamic({ app, models, component });
+	const wrapper = (models, component) => dynamic({ app: getApp, models, component });
 
-	return StackNavigator({
+	return createStackNavigator({
 		Page1: {
 			screen: wrapper([], () => require('../pages/Page1'))
 		},

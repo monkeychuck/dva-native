@@ -5,7 +5,7 @@ import {
 	TouchableOpacity,
 } from 'react-native';
 
-import { colors, layout } from '../../assets/styles';
+import { colors, fonts, layout } from '../../assets/styles';
 
 export default ({ title, ...props }) => (
 	<TouchableOpacity style={styles.container} {...props}>

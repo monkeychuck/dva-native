@@ -1,13 +1,18 @@
-import axios, { createLogger } from 'react-native-dva/axios';
+import axios, { createLogger } from 'dva-native/axios';
+import Mock from 'dva-native/mock';
+
+Mock.mock('https://github.com/nuysoft/Mock', {
+	data: 'nothing'
+})
 
 createLogger(axios);
 
 const urls = {
-	getWordsTranslate: 'POST /v2transapi'
+	getMockJsGithub: 'GET /nuysoft/Mock',
 }
 
 const api = axios.create({
-	baseURL: 'https://fanyi.baidu.com',
+	baseURL: 'https://github.com',
 	timeout: 10000,
 	headers: { 'Content-Type': 'application/json' },
 	urls

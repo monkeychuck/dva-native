@@ -5,6 +5,7 @@
  * createLogger(axios);
  * axios.create({ urls: { getProduct: 'POST /api.getProduct' } }, ... );
  * axios.getProduct();
+ *
  */
 import axios from 'axios';
 

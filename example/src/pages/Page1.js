@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
 import {
-	StyleSheet,
 	Text,
 	View,
 } from 'react-native';
-import { connect } from 'react-native-dva';
+import { connect } from 'dva-native';
+import { commonStyles } from '../assets/styles';
+import Button from '../component/button';
 
-@connect(
-	({ global, user }) => ({ ...global, ...user }),
-)
-export default class Page1 extends Component {
-
+class Page1 extends Component {
 	render(){
+		const { startupNum, navigation } = this.props;
 		return (
-			<View style={{ flex: 1 }}>
-				<Text onPress={() => this.props.navigation.navigate('Page2')}>page1</Text>
+			<View style={[commonStyles.page, commonStyles.center]}>
+				<Text style={commonStyles.text}>
+					startup: {startupNum}
+				</Text>
+				<Button
+					title="Jump Page2"
+					onPress={() => navigation.navigate('Page2')}
+				/>
 			</View>
 		)
 	}
 }
+
+export default connect(({ global, user }) => ({ ...global, ...user }))(Page1)
