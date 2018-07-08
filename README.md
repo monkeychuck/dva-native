@@ -1,6 +1,6 @@
 # dva-native
 
-encapsulating [react-navigation@1.x](https://github.com/react-navigation/react-navigation/tree/1.x), [dva](https://github.com/dvajs/dva), [axios](https://github.com/axios/axios) and [Mock.js](https://github.com/nuysoft/Mock) for react-native
+encapsulating [react-navigation@2.x](https://github.com/react-navigation/react-navigation), [dva](https://github.com/dvajs/dva), [axios](https://github.com/axios/axios) and [Mock.js](https://github.com/nuysoft/Mock) for react-native
 
 You can use [dva-native-cli](https://github.com/react-navigation/react-navigation)
 
@@ -8,6 +8,9 @@ You can use [dva-native-cli](https://github.com/react-navigation/react-navigatio
 
 ```bash
 npm install --save dva-native
+
+// for react-navigation@1.x
+npm install --save dva-native@0.1.x
 ```
 
 ### Api
@@ -23,7 +26,7 @@ import createApp, { connect } from 'dva-native';
 
 ### dva-native/navigation
 
-Export the api of [react-navigation@1.x](https://github.com/react-navigation/react-navigation/tree/1.x)
+Export the api of [react-navigation@2.x](https://github.com/react-navigation/react-navigation)
 
 ```js
 import { ... } from 'dva-native/navigation';
