@@ -91,7 +91,7 @@ If use react-navigation, `getAppNavigator` must return Navigator
 	const wrapper = (models, component) => dynamic({ 
 	    app: getApp, models, component 
 	});
-	return StackNavigator({
+	return createStackNavigator({
 	    Page: {
 	    	screen: wrapper(() => [require('./models/user')], () => require('./pages/Page')) 
 	    }
