@@ -15,17 +15,18 @@ const cached = {};
 
 function registerModel(app, model) {
 	model = model.default || model;
-	if (!cached[model.namespace]) {
+	if (!cached[model.namespace] && app.model) {
 		app.model(model);
 		cached[model.namespace] = 1;
 	}
 }
 
 export default function dynamic(config) {
-	const { app, models: resolveModels, component: resolveComponent } = config;
+	const { app: getApp, models: resolveModels, component: resolveComponent } = config;
 
 	// metro打包是commonJs规范, budnle包存在本地, 同步加载。
 	function resolve() {
+		const app = typeof getApp === 'function' ? getApp() : getApp;
 		const models = typeof resolveModels === 'function' ? resolveModels() : [];
 		const component = resolveComponent();
 		if (models && models.length) {

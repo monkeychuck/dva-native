@@ -7,11 +7,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "dva-native": "0.0.3",
     "react": "16.4.1",
     "react-native": "0.56.0",
     "react-native-code-push": "^5.3.5",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "react-redux": "^5.0.7",
+    "dva-native": "../"
   },
   "devDependencies": {
     "babel-jest": "23.2.0",

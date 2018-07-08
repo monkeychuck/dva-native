@@ -24,8 +24,8 @@
     "axios": "^0.18.0",
     "dva-core": "^1.3.0",
     "mockjs": "^1.0.1-beta3",
-    "react-navigation": "^2.6.2",
-    "react-navigation-redux-helpers": "^2.0.2",
+    "react-navigation": "^1.5.12",
+    "react-navigation-redux-helpers": "^1.1.2",
     "react-redux": "^5.0.7"
   }
 }
