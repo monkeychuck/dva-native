@@ -21,6 +21,8 @@ function registerModel(app, model) {
 	}
 }
 
+let ErrorComponent = () => null;
+
 export default function dynamic(config) {
 	const { app: getApp, models: resolveModels, component: resolveComponent } = config;
 
@@ -32,8 +34,15 @@ export default function dynamic(config) {
 		if (models && models.length) {
 			models.forEach(m => registerModel(app, m));
 		}
-		return component.default || component;
+		if (component) {
+			return component.default || component;
+		} else {
+			return false
+		}
 	}
+
+	// 调试下直接加载
+	if (__DEV__) resolve();
 
 	return class DynamicComponent extends Component {
 		constructor(...args) {
@@ -44,7 +53,9 @@ export default function dynamic(config) {
 		render() {
 			const { Component } = this;
 			if (Component) return <Component {...this.props}/>
-			return null
+			return <ErrorComponent/>
 		}
 	}
 }
+
+dynamic.setErrorComponent = (Component) => ErrorComponent = Component;
